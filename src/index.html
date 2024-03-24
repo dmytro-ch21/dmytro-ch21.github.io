@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Different WebElements</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="script.js"></script>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#multiSelect').select2({
+      placeholder: "Choose car brands",
+      allowClear: true,
+      dropdownAutoWidth: true
+    });
+  });
+
+</script>
+
+
+<div class="grid-container">
+  <!--    Checkbox elements-->
+  <div class="grid-item">
+    <h2>Checkboxes</h2>
+    <div class="notes">
+      <p><b>Note on Checkboxes:</b> Checkboxes allow for the selection of multiple options. This is commonly seen in forms where users can select all that apply.</p>
+    </div>
+    <div id="checkboxOptions">
+      <label><b>Select cars you like</b></label>
+      <div>
+        <input id="option1" type="checkbox" checked>
+        <label for="option1">Ford</label>
+      </div>
+      <div>
+        <input id="option2" type="checkbox">
+        <label for="option2">BMW</label>
+      </div>
+      <div>
+        <input id="option3" type="checkbox">
+        <label for="option3">Mercedes</label>
+      </div>
+      <div>
+        <input id="option4" type="checkbox">
+        <label for="option4">Tesla</label>
+      </div>
+      <div>
+        <input id="option5" type="checkbox">
+        <label for="option5">Other</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h2>Radio Buttons</h2>
+    <div class="notes">
+      <p><b>Note on Radio Buttons:</b> Radio buttons are used when only one option should be selected from a group. Selecting a new option will unselect the previous one.</p>
+    </div>
+    <div id="radioOptions">
+      <label><b>Select your favorite car brand</b></label>
+      <div>
+        <input id="radio1" type="radio" name="carBrand">
+        <label for="radio1">Ford</label>
+      </div>
+      <div>
+        <input id="radio2" type="radio" name="carBrand">
+        <label for="radio2">BMW</label>
+      </div>
+      <div>
+        <input id="radio3" type="radio" name="carBrand">
+        <label for="radio3">Mercedes</label>
+      </div>
+      <div>
+        <input id="radio4" type="radio" name="carBrand">
+        <label for="radio4">Tesla</label>
+      </div>
+      <div>
+        <input id="radio5" type="radio" name="carBrand">
+        <label for="radio5">Other</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h2>Single Select Dropdown</h2>
+    <div class="notes">
+      <p><b>Note on Single Select Dropdown:</b> A single select dropdown allows you to choose one option from a list. When you click on the dropdown, all the options become visible. However, only one option can be selected at a time.</p>
+    </div>
+    <div id="dropdownMenu">
+      <label for="carBrands">Choose a car brand:</label>
+      <select id="carBrands">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h2>Multi-Select Dropdown</h2>
+    <div class="notes">
+      <p><b>Note on Multi-Select Dropdown:</b> You can select multiple options from this dropdown. The box will enlarge as more options are added.</p>
+    </div>
+    <div id="multiSelectContainer" style="background-color: rgba(173, 216, 230, 0.7); padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; margin: 20px auto;">
+      <label for="multiSelect">Choose car brands:</label>
+      <select id="multiSelect" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h2>Custom Dropdown for Car Colors</h2>
+    <div class="notes">
+      <p><b>Note on Custom Dropdown:</b> This is a single-selection dropdown that provides a custom-styled interface for choosing car colors. It's designed to show available color options in a more user-friendly manner.</p>
+    </div>
+    <div class="custom-dropdown" style="background-color: rgba(173, 216, 230, 0.7); padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; margin: 20px auto;">
+      <label for="custom-select">Choose car color:</label>
+      <div id="custom-select" class="custom-select" tabindex="0">Select Color</div>
+      <div class="custom-options" style="display:none;">
+        <div class="option" tabindex="0">Red</div>
+        <div class="option" tabindex="0">Blue</div>
+        <div class="option" tabindex="0">Green</div>
+        <div class="option" tabindex="0">Yellow</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h2>Searchable Dropdown</h2>
+    <div class="notes">
+      <p><b>Note on Searchable Dropdown:</b> This dropdown features a search function, allowing you to filter and select a car type quickly. Just start typing, and the relevant options will be displayed for selection.</p>
+    </div>
+    <div class="searchable-dropdown" style="background-color: rgba(173, 216, 230, 0.7); padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; margin: 20px auto;">
+      <label for="multiSelect">Choose car type:</label>
+      <input class="search-box" type="text" placeholder="Search Car Type...">
+      <div class="searchable-options" style="display:none;">
+        <div class="searchable-option">SUV</div>
+        <div class="searchable-option">Sedan</div>
+        <div class="searchable-option">Coupe</div>
+        <div class="searchable-option">Hatchback</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>
