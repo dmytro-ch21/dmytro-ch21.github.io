@@ -161,6 +161,9 @@ function resolve(command) {
       return doHelp();
     case "clear":
       return doClear();
+    case "back":
+        window.location.href = "../../index.html"; // Navigate back
+        return "Navigating back...";
     default:
       return doDefault();
   }
