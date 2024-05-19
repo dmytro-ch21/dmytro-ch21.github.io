@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    margin: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .cookie-banner {
+    position: fixed; /* Keep it at the top of the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    opacity: 0.9; /* Slightly transparent */
+  }
+  
+  .expand-button {
+    border: none;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .expandable-content {
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+  }
+
+  .cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it appears on top of other content */
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .banner-content p {
+    margin-bottom: 0;
+  }
+  
+  .banner-content button {
+    border: none;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #decline-cookies {
+    background-color: #ccc; /* Gray color for decline button */
+  }
+
+  .countries-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .countries-table th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .countries-table th {
+    font-weight: bold;
+  }
+
+  /* Toast Message Styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: -400px; /* Start off-screen to the left */
+    background-color: #323232;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px; /* Less rounded corners for a rectangular shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    opacity: 0.9;
+    animation: slideIn 0.5s forwards, fadeOut 5s 0.5s;
+  }
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from { left: -400px; }
+    to { left: 20px; }
+  }
+  
+  /* Fade-out animation for toast */
+  @keyframes fadeOut {
+    from { opacity: 0.9; }
+    to { opacity: 0; }
+  }

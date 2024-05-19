@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Prompt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .welcome-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .welcome-button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="../../index.html"> Back to Main Page </a>
+    </div>
+<button class="welcome-button" id="welcomeButton">Click for a Personalized Welcome</button>
+<div class="message" id="message"></div>
+
+<script>
+    document.getElementById('welcomeButton').addEventListener('click', function() {
+        var name = prompt('Please enter your name:');
+        if (name) {
+            document.getElementById('message').textContent = 'Welcome, ' + name + '!';
+        } else {
+            document.getElementById('message').textContent = 'Welcome, guest!';
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Table Row</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="../../index.html"> Back to Main Page </a>
+    </div>
+<h2>Sample Data Table</h2>
+<table id="dataTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Alice</td>
+            <td><button class="delete-button">Delete</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bob</td>
+            <td><button class="delete-button">Delete</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Charlie</td>
+            <td><button class="delete-button">Delete</button></td>
+        </tr>
+        <!-- More rows can be added here -->
+    </tbody>
+</table>
+
+<script>
+    document.getElementById('dataTable').addEventListener('click', function(event) {
+        if (event.target.className === 'delete-button') {
+            var row = event.target.closest('tr');
+            var confirmed = confirm('Are you sure you want to delete this record?');
+            if (confirmed) {
+                row.remove();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

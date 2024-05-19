@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Run Before Data Explodes!</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #success-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center horizontally and vertically */
+      width: 100vw;
+      height: 100vh;
+      background-color: green;
+      color: white;
+      text-align: center;
+      font-size: 3rem;
+      opacity: 0.2;
+      z-index: -1; /* Place behind the alert */
+    }
+    #run-alert {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1; /* Place above the message */
+    }
+  </style>
+</head>
+<body onload="alert('Database Successfully Deleted!\nRun sa fast as you can and do not look back!')"> <div id="success-message"></div> <div id="run-alert">
+    <p>You cannot restore the data!</p>
+  </div>
+</body>
+</html>
